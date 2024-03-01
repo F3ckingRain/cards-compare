@@ -2,8 +2,10 @@ import React, { memo, useCallback } from "react";
 
 import styles from "./Card.module.scss";
 import { cardItemType } from "@/store/cardsState";
+import { CallbackType } from "@/types/default";
+
 interface CardProps extends cardItemType {
-  toggleOpened: (id: number) => void;
+  toggleOpened: CallbackType<(id: number) => void>;
 }
 
 function Card({ image, opened, toggleOpened, id }: CardProps) {
