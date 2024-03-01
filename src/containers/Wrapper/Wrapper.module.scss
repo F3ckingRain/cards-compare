@@ -1,3 +1,24 @@
-.wrapper {
+@import "@/styles/mixins";
 
+.wrapper {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+
+  box-sizing: border-box;
+}
+
+@include mobileWidth {
+  .wrapper {
+    padding: 0 20px;
+  }
+}
+
+@include desktopWidth {
+  .wrapper {
+    padding: 0 100px;
+  }
 }

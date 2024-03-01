@@ -1,0 +1,26 @@
+@import "@/styles/mixins";
+
+.container {
+  width: 100%;
+
+  display: grid;
+
+  >* {
+    justify-self: center;
+    align-self: center;
+  }
+}
+
+@include mobileWidth {
+  .container {
+    grid-template-columns: repeat(auto-fill, minmax(100px, calc(50% - 4px)));
+    grid-gap: 8px;
+  }
+}
+
+@include desktopWidth {
+  .container {
+    grid-template-columns: repeat(auto-fill, minmax(240px, calc(25% - 9px)));
+    grid-gap: 12px;
+  }
+}

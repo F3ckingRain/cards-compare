@@ -13,6 +13,7 @@ const initialCardsState: cardItemType[] = [
   { image: card, opened: false, id: 3 },
   { image: otherCard, opened: false, id: 4 },
   { image: card, opened: false, id: 5 },
+  { image: otherCard, opened: false, id: 6 },
 ];
 
 export { cardItemType, initialCardsState };

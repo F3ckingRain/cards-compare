@@ -1,0 +1,14 @@
+@import "variables";
+
+//Media
+@mixin mobileWidth {
+  @media screen and (max-width: $mobile-width) {
+    @content;
+  }
+};
+
+@mixin desktopWidth {
+  @media screen and (min-width: $desktop-width) {
+    @content;
+  }
+}
