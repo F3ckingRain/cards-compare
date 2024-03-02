@@ -5,7 +5,7 @@
 
   display: grid;
 
-  >* {
+  > button {
     justify-self: center;
     align-self: center;
   }
@@ -13,14 +13,14 @@
 
 @include mobileWidth {
   .container {
-    grid-template-columns: repeat(auto-fill, minmax(100px, calc(50% - 4px)));
+    grid-template-columns: repeat(auto-fill, minmax(100px, 2fr));
     grid-gap: 8px;
   }
 }
 
 @include desktopWidth {
   .container {
-    grid-template-columns: repeat(auto-fill, minmax(240px, calc(25% - 9px)));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 4fr));
     grid-gap: 12px;
   }
 }
