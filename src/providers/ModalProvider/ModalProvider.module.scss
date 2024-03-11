@@ -1,0 +1,38 @@
+@import "@/styles/mixins";
+
+.modalContainer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  min-width: 100vw;
+  min-height: 100dvh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: transparent;
+  backdrop-filter: blur(3px);
+
+  border: none;
+  box-sizing: border-box;
+
+  pointer-events: all;
+
+  z-index: 9999;
+}
+
+@include mobileWidth {
+  .modalContainer {
+
+  }
+}
+
+@include desktopWidth {
+  .modalContainer  {
+    margin: auto;
+  }
+}

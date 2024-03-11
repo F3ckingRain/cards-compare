@@ -2,6 +2,8 @@ import { useCallback } from "react";
 
 type Nullable<T> = T | null;
 
-type CallbackType<T extends Function> = ReturnType<typeof useCallback<T>>;
+const func = new Function();
+
+type CallbackType<T extends typeof func> = ReturnType<typeof useCallback<T>>;
 
 export { Nullable, CallbackType };
